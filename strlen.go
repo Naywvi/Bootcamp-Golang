@@ -1,5 +1,7 @@
 package piscine
 
+import "github.com/01-edu/z01"
+
 func StrLen() {
 	var o string = "Hello World!"
 	var l int = 0
@@ -10,7 +12,7 @@ func StrLen() {
 			s = 12
 		}
 		if l == 12 {
-			println(l)
+			z01.PrintRune(49 + 50)
 		}
 
 	}
