@@ -6,5 +6,5 @@ func main() {
 	for compteur := 122; compteur > 96; compteur-- {
 		z01.PrintRune(rune(compteur))
 	}
-	z01.PrintRune(rune('\n'))
+	z01.PrintRune('\n')
 }
