@@ -2,16 +2,15 @@ package piscine
 
 import "github.com/01-edu/z01"
 
-func StrLen() {
-	var o string = "Hello World!"
-	var l int = 0
-	for _, s := range o {
-		l++
+func StrLen(s string) {
+	var w int = 0
+	for _, s := range s {
+		w++
 		if s == 1 {
-			l++
+			w++
 			s = 12
 		}
-		if l == 12 {
+		if w == 12 {
 			z01.PrintRune(49 + 50)
 		}
 
