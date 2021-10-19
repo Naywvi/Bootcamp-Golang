@@ -1,0 +1,58 @@
+	for i := range l1 {
+		//z01.PrintRune(l1[i])
+		if l1[i] == '1' {
+			z01.PrintRune(rune(49))
+		}
+		if l1[i] == '2' {
+			z01.PrintRune(rune(50))
+		}
+		if l1[i] == '3' {
+			z01.PrintRune(rune(51))
+		}
+		if l1[i] == '4' {
+			z01.PrintRune(rune(52))
+		}
+		if l1[i] == '5' {
+			z01.PrintRune(rune(53))
+		}
+	}
+	return relou
+
+
+
+
+func BasicAtoi(s string) int {
+	l1 := []rune(s)
+
+	relou := 0
+	// l[i]
+	// 		int(l[i]	)
+	// 		relou <---- int(l[i])
+
+	for i := range l1 {
+		//	z01.PrintRune(l1[i])
+		relou = int(l1[i])
+
+	}
+	return relou
+}
+
+func main() {
+	fmt.Println(BasicAtoi("12345"))
+	fmt.Println(BasicAtoi("0000000012345"))
+	fmt.Println(BasicAtoi("000000"))
+}
+
+/*
+func BasicAtoi(s string) int {
+	b := []rune(s)
+	d := 0
+	for i := range b {
+		z01.PrintRune(b[i])
+		if b[i] > b[1] {
+			print("x")
+		}
+	}
+	return d
+}
+*/
