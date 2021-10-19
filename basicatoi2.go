@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package piscine
 
 func BasicAtoi2(s string) int {
 	relou := 0
@@ -20,11 +18,4 @@ func BasicAtoi2(s string) int {
 		}
 	}
 	return relou
-}
-
-func main() {
-	fmt.Println(BasicAtoi2("12345"))
-	fmt.Println(BasicAtoi2("0000000012345"))
-	fmt.Println(BasicAtoi2("012 345"))
-	fmt.Println(BasicAtoi2("Hello World!"))
 }
