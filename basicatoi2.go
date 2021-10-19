@@ -12,7 +12,6 @@ func BasicAtoi2(s string) int {
 			relou = relou*10 + zero
 			zero = 0
 		}
-
 	}
 	return relou
 }
