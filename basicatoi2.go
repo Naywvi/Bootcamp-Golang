@@ -6,7 +6,6 @@ func BasicAtoi2(s string) int {
 	StringRune := []rune(s)
 	for word := 0; word < zerolens; word++ {
 		if StringRune[word] < '0' || StringRune[word] > '9' {
-
 			return 0
 		} else {
 			relou *= 10
