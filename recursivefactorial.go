@@ -11,7 +11,6 @@ func RecursiveFactorial(nb int) int {
 			return nb * RecursiveFactorial(nb-1)
 		}
 	}
-	print("STOP")
 	return 0
 }
 
