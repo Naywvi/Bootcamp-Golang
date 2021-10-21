@@ -8,7 +8,6 @@ func IterativeFactorial(nb int) int {
 		} else {
 			c = c * boucle
 		}
-
 	}
 	return c
 }
