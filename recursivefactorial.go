@@ -13,22 +13,3 @@ func RecursiveFactorial(nb int) int {
 	}
 	return 0
 }
-
-/*
-}*/
-// x := 2
-// nb = 4
-// if nb > x {
-// 	x++
-// 	nb = nb * x
-// 	print(nb)
-// 	return nb
-// }
-// if nb < 1 || nb > 99 {
-// 	return 0
-// }
-// return nb
-
-// if nb == nb {
-// 			print(nb)
-//}
