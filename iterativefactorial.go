@@ -6,7 +6,6 @@ func IterativeFactorial(nb int) int {
 		return 0
 	}
 	for boucle := 1; boucle < nb; boucle++ {
-
 		c = c * boucle
 	}
 	return c
