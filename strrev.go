@@ -7,3 +7,13 @@ func StrRev(s string) string {
 	}
 	return string(rns)
 }
+
+/*
+L1 := []rune(s)
+L2 := []rune(s)
+for i := range s {
+L1[i]=L2[len(L1)-1-i]
+}
+return string(s)
+}
+*/
