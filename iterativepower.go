@@ -1,22 +1,22 @@
 package piscine
 
 func IterativePower(nb int, power int) int {
-	if nb == 0 {
+	x := *&nb
+	if nb == 0 || power == 0 {
+		println("NUL DONC ZERO", nb, power)
 		return 0
 	}
-	if nb < 0 {
+	if nb < 0 || power < 0 {
+		println("ZERO", nb, power)
 		return 0
 	}
-	for boucle := 0; boucle < 2; boucle++ {
-		if nb == 6 {
-			nb = nb * 1
-			return nb
-		}
-		if nb < 32 {
-			nb = nb*nb + 16
-		} else {
-			nb = nb + 32
+	for boucle := 0; boucle < power-1; boucle++ {
+		if nb > 0 {
+			nb *= nb
+			println("je passe ici", nb)
 		}
 	}
+	nb = *&nb
+	nb = nb / x
 	return nb
 }
