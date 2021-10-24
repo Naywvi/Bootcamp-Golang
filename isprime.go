@@ -10,6 +10,9 @@ func IsPrime(nb int) bool {
 		if y < nb {
 			return true
 		}
+		if nb < 0 {
+			return false
+		}
 	}
 	return onsenfou
 }
