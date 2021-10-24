@@ -1,15 +1,15 @@
 package piscine
 
 func IsPrime(nb int) bool {
+
 	onsenfou := true
-	for boucle := 2; boucle < 9; boucle++ {
+	for boucle := 9; boucle > 1; boucle-- {
 		y := boucle * boucle
 		if y == nb {
-			x := y == nb
-			return x
-		} else {
-			x := false
-			return x
+			return false
+		}
+		if y < nb {
+			return true
 		}
 	}
 	return onsenfou
