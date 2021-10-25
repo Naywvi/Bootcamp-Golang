@@ -1,7 +1,6 @@
 package piscine
 
 func NRune(s string, n int) rune {
-
 	x := []rune(s)
 	y := 0
 	if n < 0 {
