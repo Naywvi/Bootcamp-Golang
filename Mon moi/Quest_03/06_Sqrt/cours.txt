@@ -1,6 +1,0 @@
-Un truc marrant!
-Pour calculer la racine d'un carré parfait, il suffit de compter 
-combien il faut ajouter de nombres impairs consécutifs pour atteindre ce nombre.
--------------------------------
-
-/!\ - Pour les impairs: http://villemin.gerard.free.fr/ThNbDemo/RacinCar.htm#impair
