@@ -9,13 +9,13 @@ func FindNextPrime(nb int) int {
 			if nb%a == 0 {
 				return 0
 			}
-			if nb%3 == 0 || nb%2 == 0 {
+			if nb%3 == 0 || nb%2 == 0 || nb%5 == 0 {
 				for i := 0; i < nb; i++ {
 
 					x := 9
 					x = nb + 1
 
-					if nb%3 == 0 || nb%2 == 0 {
+					if nb%3 == 0 || nb%2 == 0 || nb%5 == 0 {
 						return FindNextPrime(x)
 					}
 					return x
