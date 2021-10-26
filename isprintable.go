@@ -5,7 +5,7 @@ func IsPrintable(s string) bool {
 	compteur := 0
 	for _, x := range s {
 		compteur++
-		if x >= 'a' && x <= 'z' || x >= 'A' && x <= 'Z' || x == 32 || x >= '0' && x <= '9' {
+		if x >= 97 && x <= 122 || x == 32 || x >= 63 && x <= 90 || x >= 33 && x <= 39 {
 			compteur2++
 		}
 
