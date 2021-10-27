@@ -20,7 +20,6 @@ func PrintNbrInOrder(n int) {
 			ONLEBOUGE = count + 1
 		}
 		for i := 0; i < ONLEBOUGE-1; i++ {
-
 			for j := 0; j < ONLEBOUGE-i-1; j++ {
 				if SLICE[j] > SLICE[j+1] {
 					print("je passe ici")
