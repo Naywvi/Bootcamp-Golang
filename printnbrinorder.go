@@ -22,7 +22,6 @@ func PrintNbrInOrder(n int) {
 		for i := 0; i < ONLEBOUGE-1; i++ {
 			for j := 0; j < ONLEBOUGE-i-1; j++ {
 				if SLICE[j] > SLICE[j+1] {
-					print("je passe ici")
 					Change = SLICE[j]
 					SLICE[j] = SLICE[j+1]
 					SLICE[j+1] = Change
