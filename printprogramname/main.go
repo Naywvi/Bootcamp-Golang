@@ -7,8 +7,8 @@ import (
 )
 
 func main() {
-	arg := os.Args
-	for _, x := range arg {
+	s := []rune(os.Args[0])
+	for _, x := range s {
 		z01.PrintRune(x)
 	}
 }
