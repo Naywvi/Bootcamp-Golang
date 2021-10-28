@@ -1,15 +1,10 @@
 package main
 
-import (
-	"os"
-
-	"github.com/01-edu/z01"
-)
+import "os"
 
 func main() {
 	arg := os.Args
-	for _, char := range arg[0] {
-		z01.PrintRune(char)
+	for _, x := range arg {
+		print(x)
 	}
-	z01.PrintRune('\n')
 }
