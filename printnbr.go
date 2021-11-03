@@ -3,9 +3,6 @@ package piscine
 import "github.com/01-edu/z01"
 
 func PrintNbr(n int) {
-	if n > 1000 || n < -1000 {
-		return
-	}
 	if n == 0 {
 		z01.PrintRune(rune(48))
 	}
@@ -16,7 +13,7 @@ func PrintNbr(n int) {
 		SLICE := []int{}
 		ns := 0
 
-		for boucle1 := 0; boucle1 < 3; boucle1++ {
+		for n != 0 {
 			if n != 0 {
 				ns = n % 10
 				n /= 10
@@ -34,7 +31,7 @@ func PrintNbr(n int) {
 	} else if n > 0 {
 		SLICE := []int{}
 		ns := 0
-		for boucle1 := 0; boucle1 < 3; boucle1++ {
+		for n != 0 {
 			if n != 0 {
 				ns = n % 10
 				n /= 10
