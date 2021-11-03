@@ -3,7 +3,7 @@ package piscine
 import "github.com/01-edu/z01"
 
 func PrintNbr(n int) {
-	if n > 1000 {
+	if n > 1000 || n < -1000 {
 		return
 	}
 	if n == 0 {
