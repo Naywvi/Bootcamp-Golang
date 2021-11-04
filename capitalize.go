@@ -9,6 +9,7 @@ func Capitalize(s string) string {
 				srune[i] = srune[i] - 32
 				count++
 			}
+			count++
 		} else {
 			if srune[i] >= 'a' && srune[i] <= 'z' {
 				if srune[i-1] >= 'a' && srune[i-1] <= 'z' || srune[i-1] >= 'A' && srune[i-1] <= 'Z' || srune[i-1] >= '0' && srune[i-1] <= '9' {
