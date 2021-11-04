@@ -22,7 +22,6 @@ func Capitalize(s string) string {
 				}
 			}
 		}
-
 	}
 	test := string(srune)
 	return test
