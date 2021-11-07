@@ -6,7 +6,6 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 		if f(a[i], a[i+1]) == 1 {
 			count++
 		}
-
 	}
 	if count == len(a)-1 {
 		return true
