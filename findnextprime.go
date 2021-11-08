@@ -1,7 +1,6 @@
 package piscine
 
 func FindNextPrime(nb int) int {
-	lim := 1000000999
 	if nb > 0 {
 		if nb == 1 || nb == 2 {
 			return 2
@@ -9,11 +8,9 @@ func FindNextPrime(nb int) int {
 		if nb == 3 {
 			return 3
 		}
-		if nb < lim {
-			for a := 2; a < nb; a++ {
-				if nb%a == 0 {
-					return FindNextPrime(nb + 1)
-				}
+		for a := nb; a >= nb; a++ {
+			if IsPrime(a) {
+				return a
 			}
 		}
 		return nb
