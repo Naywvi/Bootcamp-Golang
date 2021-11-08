@@ -11,7 +11,7 @@ func IsPrime(nb int) bool {
 		if nb%3 == 0 || nb%2 == 0 {
 			return false
 		}
-		for a := 2; a < nb; a++ {
+		for a := 2; a < nb/2; a++ {
 			if nb%a == 0 {
 				return false
 			}
