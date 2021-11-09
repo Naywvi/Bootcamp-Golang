@@ -76,9 +76,9 @@ func CalculeNEG(nb int, s string) []int {
 }
 
 func Indexx(SLICE []int, nb int, s string) {
-	var sSLICE = make([]rune, len(SLICE))
+	sSLICE := make([]rune, len(SLICE))
 	srune := []rune(s)
-	for i := 0; i < len(SLICE); i++ { //REVERSE PRINT
+	for i := 0; i < len(SLICE); i++ {
 		x := SLICE[i]
 		sSLICE[i] = srune[x]
 		Printer(sSLICE[i])
@@ -86,7 +86,7 @@ func Indexx(SLICE []int, nb int, s string) {
 }
 
 func IndexNEG(SLICE []int, nb int, s string) {
-	var sSLICE = make([]rune, len(SLICE))
+	sSLICE := make([]rune, len(SLICE))
 	srune := []rune(s)
 	z01.PrintRune('-')
 	for i := 0; i < len(SLICE); i++ {
