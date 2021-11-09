@@ -4,6 +4,8 @@ import (
 	"github.com/01-edu/z01"
 )
 
+//ololo
+
 func PrintNbrBase(nbr int, base string) {
 	count := 0
 	for i := len(base) - 1; i >= 0; i-- {
