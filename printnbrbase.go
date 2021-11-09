@@ -5,6 +5,21 @@ import (
 )
 
 func PrintNbrBase(nbr int, base string) {
+	count := 0
+	for i := len(base) - 1; i >= 0; i-- {
+		s := rune(base[i])
+		for _, x := range base {
+			if s == x {
+				count++
+				if count > 1 {
+					z01.PrintRune('N')
+					z01.PrintRune('V')
+					return
+				}
+			}
+		}
+		count = 0
+	}
 	if nbr < 0 {
 		IndexNEG(CalculeNEG(nbr, base), nbr, base)
 	} else {
@@ -22,7 +37,6 @@ func traitement(SLICE []int) []int {
 
 func Calcule(nb int, s string) []int {
 	SLICE := []int{}
-	ZERO := []int{}
 	if nb > 0 {
 		nb *= -1
 	}
@@ -34,24 +48,11 @@ func Calcule(nb int, s string) []int {
 		SLICE = append(SLICE, nb)
 		nb = nbr
 	}
-	for i := 0; i > 0; i++ {
-		if SLICE[i] > len(s) {
-			z01.PrintRune('N')
-			z01.PrintRune('V')
-			return ZERO
-		}
-	}
-	if s[0] == s[1] {
-		z01.PrintRune('N')
-		z01.PrintRune('V')
-		return ZERO
-	}
 	return traitement(SLICE)
 }
 
 func CalculeNEG(nb int, s string) []int {
 	SLICE := []int{}
-	ZERO := []int{}
 	for nb != 0 {
 		nbr := nb
 		nb %= len(s)
@@ -59,18 +60,6 @@ func CalculeNEG(nb int, s string) []int {
 		nb *= -1
 		SLICE = append(SLICE, nb)
 		nb = nbr
-	}
-	for i := range SLICE {
-		if SLICE[i] > len(s) {
-			z01.PrintRune('N')
-			z01.PrintRune('V')
-			return ZERO
-		}
-	}
-	if s[0] == s[1] {
-		z01.PrintRune('N')
-		z01.PrintRune('V')
-		return ZERO
 	}
 	return traitement(SLICE)
 }
