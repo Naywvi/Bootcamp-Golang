@@ -1,10 +1,6 @@
 package piscine
 
-import (
-	"github.com/01-edu/z01"
-)
-
-//ololo
+import "github.com/01-edu/z01"
 
 func PrintNbrBase(nbr int, base string) {
 	count := 0
