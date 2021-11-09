@@ -11,6 +11,7 @@ func PrintNbrBase(nbr int, base string) {
 		Indexx(Calcule(nbr, base), nbr, base)
 	}
 }
+
 func traitement(SLICE []int) []int {
 	SLICE2 := []int{}
 	for i := len(SLICE) - 1; i >= 0; i-- {
@@ -18,6 +19,7 @@ func traitement(SLICE []int) []int {
 	}
 	return SLICE2
 }
+
 func Calcule(nb int, s string) []int {
 	SLICE := []int{}
 	ZERO := []int{}
@@ -46,6 +48,7 @@ func Calcule(nb int, s string) []int {
 	}
 	return traitement(SLICE)
 }
+
 func CalculeNEG(nb int, s string) []int {
 	SLICE := []int{}
 	ZERO := []int{}
@@ -71,6 +74,7 @@ func CalculeNEG(nb int, s string) []int {
 	}
 	return traitement(SLICE)
 }
+
 func Indexx(SLICE []int, nb int, s string) {
 	var sSLICE = make([]rune, len(SLICE))
 	srune := []rune(s)
@@ -80,6 +84,7 @@ func Indexx(SLICE []int, nb int, s string) {
 		Printer(sSLICE[i])
 	}
 }
+
 func IndexNEG(SLICE []int, nb int, s string) {
 	var sSLICE = make([]rune, len(SLICE))
 	srune := []rune(s)
@@ -90,6 +95,7 @@ func IndexNEG(SLICE []int, nb int, s string) {
 		Printer(sSLICE[i])
 	}
 }
+
 func Printer(pr rune) {
 	z01.PrintRune(pr)
 }
