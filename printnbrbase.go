@@ -17,6 +17,8 @@ func PrintNbrBase(nbr int, base string) {
 			}
 		}
 		if base[i] == '-' || base[i] == '+' {
+			z01.PrintRune('N')
+			z01.PrintRune('V')
 			return
 		}
 		count = 0
