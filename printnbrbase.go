@@ -16,6 +16,9 @@ func PrintNbrBase(nbr int, base string) {
 				}
 			}
 		}
+		if base[i] == '-' || base[i] == '+' {
+			return
+		}
 		count = 0
 	}
 	if nbr < 0 {
