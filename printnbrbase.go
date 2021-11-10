@@ -1,93 +1,48 @@
 package piscine
 
-import "github.com/01-edu/z01"
+import (
+	"github.com/01-edu/z01"
+)
 
-func PrintNbrBase(nbr int, base string) {
-	count := 0
-	for i := len(base) - 1; i >= 0; i-- {
-		s := rune(base[i])
-		for _, x := range base {
-			if s == x {
-				count++
-				if count > 1 {
-					z01.PrintRune('N')
-					z01.PrintRune('V')
-					return
-				}
+func PrintNbrBase(s int, t string) {
+	ans := ""
+	ln := 0
+	for _, c := range t {
+		if c == c {
+			ln++
+		}
+	}
+	mx_p := ln
+	if s < 0 {
+		ans = "-"
+		mx_p *= -1
+	}
+	if ln > 1 {
+		for s/mx_p >= ln {
+			mx_p *= ln
+		}
+		for mx_p != 0 {
+			ans = ans + string(t[s/mx_p])
+			s = s - s/mx_p*mx_p
+			mx_p /= ln
+		}
+		x := map[rune]bool{}
+		for _, c := range t {
+			if c == '+' || c == '-' {
+				ans = "NV"
+				break
+			}
+			if x[c] == false {
+				x[c] = true
+			} else {
+				ans = "NV"
+				break
 			}
 		}
-		if base[i] == '-' || base[i] == '+' {
-			z01.PrintRune('N')
-			z01.PrintRune('V')
-			return
-		}
-		count = 0
-	}
-	if nbr < 0 {
-		IndexNEG(CalculeNEG(nbr, base), nbr, base)
 	} else {
-		Indexx(Calcule(nbr, base), nbr, base)
+		ans = "NV"
 	}
-}
-
-func traitement(SLICE []int) []int {
-	SLICE2 := []int{}
-	for i := len(SLICE) - 1; i >= 0; i-- {
-		SLICE2 = append(SLICE2, SLICE[i])
+	for _, c := range ans {
+		z01.PrintRune(c)
 	}
-	return SLICE2
-}
-
-func Calcule(nb int, s string) []int {
-	SLICE := []int{}
-	if nb > 0 {
-		nb *= -1
-	}
-	for nb != 0 {
-		nbr := nb
-		nb %= len(s)
-		nbr /= len(s)
-		nb *= -1
-		SLICE = append(SLICE, nb)
-		nb = nbr
-	}
-	return traitement(SLICE)
-}
-
-func CalculeNEG(nb int, s string) []int {
-	SLICE := []int{}
-	for nb != 0 {
-		nbr := nb
-		nb %= len(s)
-		nbr /= len(s)
-		nb *= -1
-		SLICE = append(SLICE, nb)
-		nb = nbr
-	}
-	return traitement(SLICE)
-}
-
-func Indexx(SLICE []int, nb int, s string) {
-	sSLICE := make([]rune, len(SLICE))
-	srune := []rune(s)
-	for i := 0; i < len(SLICE); i++ {
-		x := SLICE[i]
-		sSLICE[i] = srune[x]
-		Printer(sSLICE[i])
-	}
-}
-
-func IndexNEG(SLICE []int, nb int, s string) {
-	sSLICE := make([]rune, len(SLICE))
-	srune := []rune(s)
-	z01.PrintRune('-')
-	for i := 0; i < len(SLICE); i++ {
-		x := SLICE[i]
-		sSLICE[i] = srune[x]
-		Printer(sSLICE[i])
-	}
-}
-
-func Printer(pr rune) {
-	z01.PrintRune(pr)
 }
