@@ -12,7 +12,7 @@ func main() {
 	str := ""
 	Change := '0'
 	for _, x := range arg {
-		str = str + x //vers string
+		str = str + x
 	}
 	for _, x := range str {
 		SLICE = append(SLICE, x)
