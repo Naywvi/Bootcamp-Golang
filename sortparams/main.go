@@ -28,6 +28,5 @@ func main() {
 	}
 	for i := 0; i < len(SLICE); i++ {
 		z01.PrintRune(SLICE[i])
-		z01.PrintRune('\n')
 	}
 }
