@@ -20,7 +20,6 @@ func Split(s, sep string) []string {
 				str = SLICE[index] + str
 				SLICE[index] = str
 			} else if s[i] == sep[1] && s[i-1] == sep[0] {
-				//ca degage
 			} else {
 				str = SLICE[index] + str
 				SLICE[index] = str
