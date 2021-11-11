@@ -1,7 +1,13 @@
 package piscine
 
 func Split(s, sep string) []string {
-	SLICE := make([]string, 4)
+	indexs := 1
+	for i := range s {
+		if s[i] == sep[0] && s[i+1] == sep[1] {
+			indexs++
+		}
+	}
+	SLICE := make([]string, indexs)
 	SLICE[0] = "ok"
 	count := 1
 	index := 0
@@ -20,6 +26,7 @@ func Split(s, sep string) []string {
 				str = SLICE[index] + str
 				SLICE[index] = str
 			} else if s[i] == sep[1] && s[i-1] == sep[0] {
+				//ca degage
 			} else {
 				str = SLICE[index] + str
 				SLICE[index] = str
