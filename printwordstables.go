@@ -12,7 +12,7 @@ func PrintWordsTables(a []string) {
 		}
 		str = ""
 	}
-	for i := 0; i < len(RSLICE)-1; i++ {
+	for i := 0; i < len(RSLICE); i++ {
 		if RSLICE[i] == ' ' {
 			z01.PrintRune('\n')
 		} else {
