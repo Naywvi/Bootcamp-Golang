@@ -1,7 +1,7 @@
 package piscine
 
 func Split(s, sep string) []string {
-	var SLICE = make([]string, 4)
+	SLICE := make([]string, 4)
 	SLICE[0] = "ok"
 	count := 1
 	index := 0
