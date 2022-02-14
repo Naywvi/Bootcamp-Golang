@@ -1,0 +1,34 @@
+Instructions
+
+Write a function CountIf that returns, the number of elements of a string slice, for which the f function returns true.
+
+Expected function
+
+func CountIf(f func(string) bool, tab []string) int {
+
+}
+Usage
+
+Here is a possible program to test your function :
+
+package main
+
+import (
+	"fmt"
+	"piscine"
+)
+
+func main() {
+	tab1 := []string{"Hello", "how", "are", "you"}
+	tab2 := []string{"This","1", "is", "4", "you"}
+	answer1 := piscine.CountIf(piscine.IsNumeric, tab1)
+	answer2 := piscine.CountIf(piscine.IsNumeric, tab2)
+	fmt.Println(answer1)
+	fmt.Println(answer2)
+}
+And its output :
+
+$ go run .
+0
+2
+$

@@ -1,0 +1,20 @@
+Usage
+
+Here is a possible program to test your function :
+
+package main
+
+import (
+	"fmt"
+	"piscine"
+)
+
+func main() {
+	s := "HelloHAhowHAareHAyou?"
+	fmt.Printf("%#v\n", piscine.Split(s, "HA"))
+}
+And its output :
+
+$ go run .
+[]string{"Hello", "how", "are", "you?"}
+$
