@@ -1,1 +1,10 @@
-Here we have 3 folders. A folder contains all the quests done, a folder with Go lessons. Then we have a folder that contains several exams to practice.
+# 🏊 Golang Bootcamp
+
+Welcome to the Golang Bootcamp! This bootcamp is a series of exercises designed to help you learn and practice Golang programming. Each exercise comes with its solution and explanatory comments to help you understand key concepts.
+
+## How to Use the Bootcamp
+
+1. Clone this repository to your local machine using the command:
+
+   ```shell
+   git clone https://github.com/your-username/golang-bootcamp.git
